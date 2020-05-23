@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MAD_Tute05</string>
+    <string name="delete" />
+    <string name="update" />
+    <string name="save" />
+    <string name="show" />
+    <string name="number" />
+    <string name="address" />
+    <string name="name" />
+    <string name="id" />
+</resources>

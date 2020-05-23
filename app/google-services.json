@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "927357078491",
+    "firebase_url": "https://teatapplicationfirebase.firebaseio.com",
+    "project_id": "teatapplicationfirebase",
+    "storage_bucket": "teatapplicationfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927357078491:android:e0fb53bea5f31b03e275fe",
+        "android_client_info": {
+          "package_name": "com.example.mad_tute05"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927357078491-vc0bn8h487ggbm9ef7j0vs8jul3qb3gr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOicbhkeiqGP-HMnyYG6nFlTS3j8wNjfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927357078491-vc0bn8h487ggbm9ef7j0vs8jul3qb3gr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
