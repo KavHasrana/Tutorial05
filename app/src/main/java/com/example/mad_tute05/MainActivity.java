@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSave, btnShow, btnUpdate, btnDelete;
     DatabaseReference dbRef;
     Student std;
-    long maxId = 0;
+    long SID = 001;
 
     private void clearControls(){
         txtID.setText("");
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
-                            maxId = (dataSnapshot.getChildrenCount());
+                            SID = (dataSnapshot.getChildrenCount());
                         }
                     }
 
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         std.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
 
                         //dbRef.push().setValue(std);
-                        dbRef.child(String.valueOf(maxId + 1)).setValue(std);
+                        dbRef.child(String.valueOf(SID + 0)).setValue(std);
                         Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
                     }
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Student").child("std1");
+                DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Student").child("1");
                 readRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -125,14 +125,14 @@ public class MainActivity extends AppCompatActivity {
                 updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild("std1")){
+                        if(dataSnapshot.hasChild("1")){
                             try{
                                 std.setID(txtID.getText().toString().trim());
                                 std.setName(txtName.getText().toString());
                                 std.setAddress(txtAdd.getText().toString());
                                 std.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
 
-                                dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("std1");
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("1");
                                 dbRef.setValue(std);
                                 clearControls();
 
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
                 delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild("std1")){
-                            dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("std1");
+                        if(dataSnapshot.hasChild("1")){
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("1");
                             dbRef.removeValue();
                             clearControls();
                             Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
