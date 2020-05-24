@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
                 });
                 try {
                     if(TextUtils.isEmpty(txtID.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please Enter an Id", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please Enter your ID", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(txtName.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please Enter a Name", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please Enter your Name", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(txtAdd.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please Enter a Address", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please Enter your Address", Toast.LENGTH_SHORT).show();
                     else{
                         std.setID(txtID.getText().toString().trim());
                         std.setName(txtName.getText().toString().trim());
